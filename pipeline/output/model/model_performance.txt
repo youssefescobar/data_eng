@@ -1,0 +1,20 @@
+Best Parameters:
+{'metric': 'euclidean', 'n_neighbors': 3, 'weights': 'distance'}
+
+Accuracy: 0.9923
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.99      0.99     28411
+           1       0.99      1.00      0.99     28452
+
+    accuracy                           0.99     56863
+   macro avg       0.99      0.99      0.99     56863
+weighted avg       0.99      0.99      0.99     56863
+
+Confusion Matrix:
+[[27996   415]
+ [   21 28431]]
+
+ROC-AUC Score: 0.9962
