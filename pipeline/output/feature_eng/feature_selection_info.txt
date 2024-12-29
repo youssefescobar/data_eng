@@ -1,0 +1,1 @@
+New shape after dropping 50% of the data: (284315, 31)
