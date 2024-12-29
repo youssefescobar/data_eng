@@ -1,2 +1,5 @@
 /pipeline/data/creditcard_2023.csv
-pipeline/output/selected_features.csv
+/pipeline/output/selected_features.csv
+/pipeline/selected_features.csv
+/pipeline/loaded.csv
+/pipeline/preprocessed.csv

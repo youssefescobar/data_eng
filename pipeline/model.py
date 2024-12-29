@@ -50,9 +50,9 @@ with open("./output/model/model_performance.txt", "w") as f:
         y_pred_proba = best_knn.predict_proba(X_test)[:, 1]
         f.write("\nROC-AUC Score: {:.4f}\n".format(roc_auc_score(y_test, y_pred_proba)))
 
-X_selected_5000 = X_selected.iloc[:20000, :]
-y_5000 = y.iloc[:20000]  
-train_sizes, train_scores, val_scores = learning_curve(best_knn, X_selected_5000, y_5000, cv=5, scoring='accuracy', train_sizes=np.linspace(0.1, 1.0, 10))
+X_selected_20000 = X_selected.iloc[:20000, :]
+y_20000 = y.iloc[:20000]  
+train_sizes, train_scores, val_scores = learning_curve(best_knn, X_selected_20000, y_20000, cv=5, scoring='accuracy', train_sizes=np.linspace(0.1, 1.0, 10))
 
 train_mean = train_scores.mean(axis=1)
 train_std = train_scores.std(axis=1)

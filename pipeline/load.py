@@ -1,10 +1,6 @@
-# load.py
-import sys
 import pandas as pd
 import os
 import io
-
-
 
 def load_dataset(file):
     df = pd.read_csv(file)

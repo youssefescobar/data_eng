@@ -5,18 +5,15 @@ services:
       - ./data:/app/data
       - ./output:/app/output
     command: /bin/bash -c "
-      python load.py /app/data/creditcard_2023.csv && 
+      python load.py && 
       while [ ! -f /app/selected_features.csv ]; do 
-        echo 'Waiting for selected_features.csv to be created...'; 
         sleep 20; 
       done && cp /app/selected_features.csv /app/output/selected_features.csv"
 
   model1:
     build: .
     volumes:
-      - ./data:/app/data
       - ./output:/app/output
-    command: /bin/bash -c "python model.py"
     depends_on:
       - data_ingestion
     entrypoint: /bin/bash -c "
@@ -28,9 +25,7 @@ services:
   model2:
     build: .
     volumes:
-      - ./data:/app/data
       - ./output:/app/output
-    command: /bin/bash -c "python model.py"
     depends_on:
       - data_ingestion
 
